@@ -1,0 +1,19 @@
+{
+    "name": "gimenamariaca/proyecto",
+    "description": "Sistema para el manejo de productos",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files":[
+            "app/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Gimena Mariaca",
+            "email": "sin@correo.com"
+        }
+    ],
+    "require": {}
+}
