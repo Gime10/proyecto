@@ -37,14 +37,14 @@ class Request{
     public function __construct()
     {
         $segment = explode('/',$_SERVER['REQUEST_URI']);
-        $this->setController($segment[4]);
-        $this->setMethod($segment[5]);
+        $this->setController($segment);
+        $this->setMethod($segment);
 
   
     }
     public function send()
     {
-        echo '<p> en el controlador'.$this->getController().'llamar al metodo'.$this->getMethod();
+        echo '<p> en el controlador [ '.$this->getController().'] llamar al metodo ['.$this->getMethod() .' ]';
 
   
     }

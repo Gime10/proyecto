@@ -2,10 +2,9 @@
 
 require __DIR__ . '/../vendor/autoload.php ';
 
-$request= new App\Http\controllers\Request.php;
+$request= new App\Http\Request;
 
-$request->setController("hola");
-echo $request->getController();
+$request->send();
 
 
 
