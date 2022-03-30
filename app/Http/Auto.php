@@ -5,7 +5,7 @@ namespace App\Http;
 class auto{
 
 public $marca;
-public $color;
+public $color; 
 
 function mostrar()
 {
