@@ -6,10 +6,8 @@ class HomeController{
     function index()
     {
      echo'hola estoy funcionando';
+     return new \App\Http\Response('home');
     }
 
-    function comer()
-    {
-        echo"hola como estan";
-    }
+
 }

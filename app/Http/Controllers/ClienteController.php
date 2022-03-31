@@ -7,6 +7,7 @@ class ClienteController{
     function index()
     {
         echo' estoy en el indice del cliente';
+        return new \App\Http\Response('cliente');
     }
 
     function addCliente()
