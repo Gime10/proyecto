@@ -10,11 +10,11 @@ class Request{
 
     public function setController($valor){
 
-        if(empty( $valor[3]))
+        if(empty( $valor[1]))
         {
             $this->controller='home';
         }else
-        $this->controller=$valor[3];
+        $this->controller=$valor[1];
     }
     public function getController(){
         $aux= strtolower($this->controller);// pasa a minuscula
@@ -26,11 +26,11 @@ class Request{
 
     public function setMethod($valor)
     {
-        if(empty($valor[4]))
+        if(empty($valor[2]))
         {
             $this->method='index';
         }else
-        $this->method=$valor[4];
+        $this->method=$valor[2];
     }
     public function getMethod()
     {
@@ -49,8 +49,9 @@ class Request{
     {
         $myController=$this->getController();
         $mymethod=$this->getMethod();
-        call_user_func([new $myController, $mymethod]);  
-  
+        $myResponse = call_user_func([new $myController, $mymethod]);  
+       
+        $myResponse->send();
     }
 
 }
