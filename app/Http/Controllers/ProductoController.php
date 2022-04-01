@@ -20,10 +20,6 @@ class ProductoController{
        
         return view('editar Producto');
     }
-    function deleteProducto()
-    {
-        
-        return view('borrare Producto');
-    }
+
 
 }
