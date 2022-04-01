@@ -13,6 +13,8 @@ class Response
 
     function send()
     {
-        echo 'enviar como respuesta la vista ' . $this->view;
+       $content= file_get_contents(pathView($this->view));
+       require pathView('Layout');
+       
     }
 }

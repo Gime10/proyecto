@@ -6,23 +6,20 @@ class ClienteController{
 
     function index()
     {
-        echo' estoy en el indice del cliente';
-        return new \App\Http\Response('cliente');
+       
+        return view('ListarCliente');
     }
 
     function addCliente()
     {
-        echo' aqui añadire un cliente';
+        
+        return view('NuevoCliente');
     }
     function editCliente()
     {
-        echo' aqui editare un cliente';
+       
+        return view('EditarCliente');
     }
-    function deleteCliente()
-    {
-        echo' aqui editare un cliente';
-    }
-
 
 
 }
