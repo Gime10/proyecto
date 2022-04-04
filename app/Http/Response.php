@@ -17,4 +17,8 @@ class Response
        require pathView('Layout');
        
     }
+
+    function isViewActive($view) {
+        return $this->view == $view ? "active" : "";
+    }
 }

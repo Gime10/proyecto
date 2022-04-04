@@ -15,22 +15,22 @@
                     <div role="tabpanel">
                         <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Principal</a>
+                            <a class="nav-link <?php echo $this->isViewActive("Home");?>" aria-current="page" href="#">Principal</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ListarProductos.php">Productos</a>
+                            <a class="nav-link <?php echo $this->isViewActive("ListarProducto");?>" href="/producto">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Clientes</a>
+                            <a class="nav-link <?php echo $this->isViewActive("ListarCliente");?>" href="#">Clientes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Ventas</a>
+                            <a class="nav-link <?php echo $this->isViewActive("ListarVenta");?>" href="#">Ventas</a>
                         </li>
                         </ul>
                     </div>
                 </div>
             </div>
-       
+
             <?php echo $content; ?>
 
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
