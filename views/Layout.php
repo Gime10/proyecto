@@ -15,7 +15,7 @@
                     <div role="tabpanel">
                         <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link <?php echo $this->isViewActive("Home");?>" aria-current="page" href="#">Principal</a>
+                            <a class="nav-link <?php echo $this->isViewActive("Home");?>" aria-current="page" href="/home">Principal</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link <?php echo $this->isViewActive("ListarProducto");?>" href="/producto">Productos</a>
