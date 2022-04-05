@@ -6,11 +6,12 @@ class ProductoController{
 
     function index()
     {
+        
         $producto= new \App\Models\Producto;
         $result=$producto->getProductos();
-        echo $result;
-
+        var_dump($result);
         return view('ListarProducto');
+        
     }
 
     function addProducto()
