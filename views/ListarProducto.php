@@ -63,7 +63,7 @@
                     </div>
 
                     <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
-                    <h2>{{title}}</h2>
+                    <h2 class="d-flex justify-content-center">{{title}}</h2>
                         <table class="table table-light">
                             <thead>
                                 <tr>
@@ -74,6 +74,7 @@
                                 <th scope="col">Categoria</th>
                                 <th scope="col">Descripcion</th>
                                 <th scope="col">Acciones</th>
+                                <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>

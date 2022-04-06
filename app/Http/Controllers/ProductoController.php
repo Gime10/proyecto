@@ -35,7 +35,10 @@ class ProductoController
             $tableBody .= $value->descripcion;
             $tableBody .= '</td>';
             $tableBody .= '<td>';
-            $tableBody .= '<button type="button" class="btn btn-danger">Eliminar</button>';
+            $tableBody .= '<button type="button" class="btn btn-danger btn-sm">Eliminar</button>';
+            $tableBody .= '</td>';
+            $tableBody .= '<td>';
+            $tableBody .= '<button type="button" class="btn btn-success btn-sm">Editar</button>';
             $tableBody .= '</td>';
             $tableBody .= '</tr>';
         }
