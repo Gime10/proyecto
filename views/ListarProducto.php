@@ -63,7 +63,7 @@
                     </div>
 
                     <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
-                    <h2>Lista de productos</h2>
+                    <h2>{{title}}</h2>
                         <table class="table table-light">
                             <thead>
                                 <tr>
@@ -73,23 +73,17 @@
                                 <th scope="col">Precio</th>
                                 <th scope="col">Categoria</th>
                                 <th scope="col">Descripcion</th>
+                                <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                <th scope="row">1</th>
-                                <td>Vestido</td>
-                                <td>Valeriano</td>
-                                <td>450</td>
-                                <td>Ropa</td>
-                                <td>Prenda de alta costura</td>
-                                </tr>
-                                <tr>
+                               {{tableBody}}
                                 
                             </tbody>
                         </table>
 
                     </div>
+                    
                 </div>
     </div>
 </body>

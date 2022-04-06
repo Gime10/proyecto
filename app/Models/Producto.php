@@ -13,6 +13,7 @@ class BaseProducto
         $statement-> execute();
         $arrayResult= $statement->fetchAll();
         $arrayProducto=array();
+        
         foreach( $arrayResult as $row)
         {
             $producto= new Producto();
