@@ -10,7 +10,7 @@ class ConectionPDO
             $dsn='mysql:dbname=dbproyectox;host=localhost';
             $username='root';
             $password='';
-            $conection=new \PDO($dsn, $username,$password);
+            $conection=new \PDO($dsn, $username, $password);
             return $conection;
         }catch( \PDOException $e)
         {

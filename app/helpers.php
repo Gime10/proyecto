@@ -16,3 +16,9 @@ if(!function_exists('pathView')){
         }
     
 }
+
+if(!function_exists('redirect')){
+    function redirect($url){
+        return header('Location: '.$url);
+    }
+}

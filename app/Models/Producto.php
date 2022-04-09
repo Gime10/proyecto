@@ -27,6 +27,13 @@ class BaseProducto
         }
           return $arrayProducto;
     }
+
+    function save()
+    {
+        $conection = \App\Database\ConectionPDO::createConection();
+        $conection -> exec("insert into producto (nombre,empresa,precio,categoria,descripcion) values('".$this->nombre."','".$this->empresa."','".$this->precio."','".$this->categoria."','".$this->descripcion."')");
+        $this->id=$conection->lastInsertId();
+    }
 }
 
 class Producto extends BaseProducto

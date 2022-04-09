@@ -6,6 +6,7 @@ class Request{
 
     private $controller;
     private $method;
+    private $id;
   
 
     public function setController($valor){
@@ -36,21 +37,35 @@ class Request{
     {
       return $this->method;
     }
+    public function setId($valor)
+    {
+        if(empty($valor[3]))
+        {
+            $this->id=0;
+        }else
+        $this->id=$valor[3];
+    }
+    public function getId()
+    {
+        return $this->id;
+    }
 
     public function __construct()
     {
         $segment = explode('/',$_SERVER['REQUEST_URI']);
         $this->setController($segment);
         $this->setMethod($segment);
-
+        $this->setId($segment);
   
     }
+
+
     public function send()
     {
         $myController=$this->getController();
         $mymethod=$this->getMethod();
-        $myResponse = call_user_func([new $myController, $mymethod]);  
-       
+        $myId=$this->getId();
+        $myResponse = call_user_func([new $myController, $mymethod],$myId);  
         $myResponse->send();
     }
 

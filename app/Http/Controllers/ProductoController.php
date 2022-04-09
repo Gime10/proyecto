@@ -35,10 +35,10 @@ class ProductoController
             $tableBody .= $value->descripcion;
             $tableBody .= '</td>';
             $tableBody .= '<td>';
-            $tableBody .= '<button type="button" class="btn btn-danger btn-sm">Eliminar</button>';
+            $tableBody .= '<a type="button" class="btn btn-danger btn-sm">Eliminar</a>';
             $tableBody .= '</td>';
             $tableBody .= '<td>';
-            $tableBody .= '<button type="button" class="btn btn-success btn-sm">Editar</button>';
+            $tableBody .= '<a type="button" class="btn btn-success btn-sm" href="/Producto/edit/'.$value->id.'" role="button">Editar</a>';
             $tableBody .= '</td>';
             $tableBody .= '</tr>';
         }
@@ -46,14 +46,29 @@ class ProductoController
         return view('ListarProducto', ['title' => 'Lista de productos', 'tableBody' => $tableBody]  );
     }
 
-    function addProducto()
+    function add()
     {
 
-        return view('añadir producto');
+        return view('ListarProducto');
     }
-    function editProducto()
+    function edit($id)
     {
+       echo $id;
+        return view('ListarProducto');
+    }
 
-        return view('editar Producto');
+    function save()
+    {
+        $producto=new \App\Models\Producto;
+        $producto->id=$_POST['id'];
+        $producto->nombre=$_POST['nombre'];
+        $producto->empresa=$_POST['empresa'];
+        $producto->precio=$_POST['precio'];
+        $producto->categoria=$_POST['categoria'];
+        $producto->descripcion=$_POST['descripcion'];
+    
+        $producto->save();
+ 
+        return redirect('/Producto');
     }
 }

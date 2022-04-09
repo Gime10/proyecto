@@ -6,11 +6,13 @@ class Response
 {
     private $view;
     private $data;
+    
 
     function __construct($view, $data)
     {
         $this->view = $view;
         $this->data = $data;
+     
     }
 
     function send()
